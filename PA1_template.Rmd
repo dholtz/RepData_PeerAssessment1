@@ -2,7 +2,8 @@
 title: "CourseProject1"
 author: "David Holtzhouser"
 date: "February 5, 2016"
-output: html_document
+output: html_document:
+  keep_md: yes
 ---
 
 ### Install and load the required packages:
