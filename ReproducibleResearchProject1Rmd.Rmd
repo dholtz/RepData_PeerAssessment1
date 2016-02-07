@@ -47,19 +47,20 @@ median(stepsPerDay$steps)
 ```
 
 ### 3) What is the average daily activity pattern?
+```{r}
+intervalOfStepsAverage <- aggregate(steps ~ interval, cleanActivityMonitoringData, mean)
+```
 
 #### 3a) Time Series plot
 ```{r}
-plot()
+plot(intervalOfStepsAverage$interval, intervalOfStepsAverage$steps, type='l', main = "Average Daily Activity Pattern",
+     xlab = "5 Minute Time Intervals", ylab = "Average Number of Steps")
 ```
 
-###  4) Time Series Plot of the Average Number of Steps Taken
-
-
-
-
-###  5) 5 Minute Interval that, on average, contains the Maximum Number of Steps
-
+### 3b) 5-minute interval, on average across all days, contains the maximum number of steps?
+```{r}
+  intervalOfStepsAverage[which.max(intervalOfStepsAverage$steps), ]
+```
 
 
 
